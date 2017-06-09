@@ -6,7 +6,7 @@ import { HEROES } from './mock-heroes';
 // Omitting them leads to an error that's difficult to diagnose.
 @Injectable()
 export class HeroService {
-  getHeroes(): Hero[] {
-    return HEROES;
+  getHeroes(): Promise<Hero[]> {
+    return Promise.resolve(HEROES);
   }
 }
